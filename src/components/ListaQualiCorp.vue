@@ -574,10 +574,11 @@ cursor:pointer;
   $pseudo: after;
   $duration: 3s;
   $elastic: cubic-bezier(.31,.01,.26,1.55);
-  margin-top:40%;
-  display:block;
-  
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   
   &::before {
     content: "";
