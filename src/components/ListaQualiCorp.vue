@@ -77,16 +77,17 @@
 
 
                 </div>
-              </div>
-            </form>
-
-               <div class="alert alert-danger mt-5" role="alert" v-if="error">
+                
+               <div class="alert alert-danger" role="alert" v-if="error">
                 <span>{{error_all}}</span> 
                 <span>{{error_ent}}</span> 
                 <span>{{error_ibge}}</span> 
                 <span>{{error_prof}}</span> 
                 <span>{{error_uf}}</span> 
               </div>
+              </div>
+            </form>
+
 
 
 
@@ -304,6 +305,8 @@
   }
 
   .alert {
+    margin: 1%;
+    width: 100%;
     span {
       width:100%;
           display: block;
