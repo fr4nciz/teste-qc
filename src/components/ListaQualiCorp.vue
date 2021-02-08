@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-lg-10 mx-auto mb-4">
           <div class="section-title text-center ">
-                    <img src="http://www.economizecomaqualicorp.com.br/assets/img/qualicorp-logo.png" class="img-fluid mt-3 mb-3" />
+                    <img src="@/assets/logo.png" class="img-fluid mt-3 mb-3" />
 
             <h3 class="top-c-sep">Teste Qualicorp</h3>
          
@@ -191,7 +191,7 @@
       setAltImg(event) { 
           event.target.src = "https://lh3.googleusercontent.com/proxy/45f73P8wEAaPm1TEsq5TpHJw5W7sFnRJ0pz2FeOU9i9BsvQHQ6XMwWv2ROtmbJcFuVIet8VOzGPQMSzlIolPRzBfOO1hNHpsMeuM_TnJve3JuMuZGNSIFJpy0sd7kmw5dC0-96rADUmt6aJuKBkcYXhag3EmF4iGUzsyV3ulzPyHpqL0UMQ_" 
       },
-      getState: async function () {
+      getStates: async function () {
         this.spinner = true;
         try {
           await api.get(
@@ -203,8 +203,7 @@
           });
         } catch (error) {
            this.error = true;    
-          this.error_uf = 'ERRO! Estado não Localizado!'; 
-          console.log(error);
+          this.error_uf = 'ERRO! Estado não Localizado!';           
         } finally {
           this.spinner = false;
         }
@@ -221,8 +220,7 @@
             });
         } catch (error) {
           this.error = true;    
-          this.error_ibge = 'ERRO! Dados do IBGE não localizado!'; 
-          console.log(error);
+          this.error_ibge = 'ERRO! Dados do IBGE não localizado!';           
         } finally {
           this.spinner = false;
         }
@@ -239,8 +237,7 @@
             });
         } catch (error) {
           this.error = true;    
-          this.error_prof = 'ERRO! Profissão não localizada!';  
-          console.log(error);
+          this.error_prof = 'ERRO! Profissão não localizada!';            
         } finally {
           this.spinner = false;
         }
@@ -257,8 +254,7 @@
           });
         } catch (error) {
            this.error = true;    
-          this.error_ent = 'ERRO! Entidade não localizada!';  
-          console.log(error);
+          this.error_ent = 'ERRO! Entidade não localizada!';            
         } finally {
           this.spinner = false;
         }
@@ -289,7 +285,7 @@
       },
     },
     created() {
-      this.getState();
+      this.getStates();
     },
   }
 </script>
@@ -488,7 +484,15 @@ h5 {
       margin:1%;
   }
 
-.active.job-box {
+
+
+  @media (min-width: 768px) {
+    .job-content ul li {
+      border-bottom: 0;
+      padding: 0;
+    }
+
+    .active.job-box {
   width:31.33%;
   float:left;
   margin:1%;
@@ -509,12 +513,6 @@ h5 {
 }
 }
 
-
-  @media (min-width: 768px) {
-    .job-content ul li {
-      border-bottom: 0;
-      padding: 0;
-    }
 
   }
 
