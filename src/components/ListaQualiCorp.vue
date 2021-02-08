@@ -189,7 +189,7 @@
     },
     methods: {
       setAltImg(event) { 
-          event.target.src = "https://lh3.googleusercontent.com/proxy/45f73P8wEAaPm1TEsq5TpHJw5W7sFnRJ0pz2FeOU9i9BsvQHQ6XMwWv2ROtmbJcFuVIet8VOzGPQMSzlIolPRzBfOO1hNHpsMeuM_TnJve3JuMuZGNSIFJpy0sd7kmw5dC0-96rADUmt6aJuKBkcYXhag3EmF4iGUzsyV3ulzPyHpqL0UMQ_" 
+          event.target.src = "https://www.grouphealth.ca/wp-content/uploads/2018/05/placeholder-image-300x225.png" 
       },
       getStates: async function () {
         this.spinner = true;
